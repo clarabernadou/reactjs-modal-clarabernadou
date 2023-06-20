@@ -11,9 +11,9 @@ This project created by Clara Bernadou
 
 ## Installation
 
-`$ npm install`
-`$ npm i --save @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome @fortawesome/fontawesome-svg-core`
-Use `<Modal closeConfirmModal={closeConfirmModal}/>` inside your React app
+* `$ npm install`
+* `$ npm i --save @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome @fortawesome/fontawesome-svg-core`
+* Use `<Modal closeConfirmModal={closeConfirmModal}/>` inside your React app
 
 ## API documentation
 
