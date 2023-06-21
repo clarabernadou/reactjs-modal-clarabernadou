@@ -1,27 +1,38 @@
 # Modal for ReactJS
-
-This project created by Clara Bernadou
+This project is created by Clara Bernadou.
 
 ## Table of Contents
-
 * [Installation](#installation)
-* [API documentation](#api-documentation)
+* [API Documentation](#api-documentation)
 * [Examples](#examples)
-* [Render](#render)
+* [Rendering](#rendering)
 
 ## Installation
+To install the Modal for ReactJS, follow these steps:
 
-* `$ npm install`
-* `$ npm i --save @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome @fortawesome/fontawesome-svg-core`
-* Use `<Modal closeConfirmModal={closeConfirmModal}/>` inside your React app
+1. Install the package using npm:
 
-## API documentation
+   ```bash
+   $ npm install reactjs-modal-clarabernadou
+   ```
+
+2. Install additional dependencies:
+
+   ```bash
+  $ npm i --save react react-dom react-scripts @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome
+   ```
+
+## API Documentation
+The Modal component provides the following API:
+
+- `closeConfirmModal`: A function to close the modal. Pass this function as a prop to the Modal component.
 
 ## Examples
+Here is an example of how to use the Modal component in your React application:
 
 ```jsx
 import React, { useState, useEffect } from 'react';
-import Modal from 'react-modal';
+import Modal from 'reactjs-modal-clarabernadou';
 import './app.css'
 
 Modal.setAppElement('#yourAppElement');
@@ -76,7 +87,11 @@ function App() {
 ReactDOM.render(<App />, appElement);
 ```
 
-## Render
+Make sure to replace `#yourAppElement` with the appropriate selector for the root element of your React app.
 
-![Screenshot](./modal-render.png "Modal Render") 
+## Rendering
+Here is a screenshot of how the modal will look when rendered:
 
+![Modal Render](./modal-render.png)
+
+Please note that the styling of the modal can be customized to fit your application's design.
