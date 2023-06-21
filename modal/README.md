@@ -19,7 +19,7 @@ To install the Modal for ReactJS, follow these steps:
 2. Install additional dependencies:
 
    ```bash
-  $ npm i --save react react-dom react-scripts @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome
+   $ npm install react react-dom react-scripts @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome
    ```
 
 ## API Documentation
@@ -33,7 +33,7 @@ Here is an example of how to use the Modal component in your React application:
 ```jsx
 import React, { useState, useEffect } from 'react';
 import Modal from 'reactjs-modal-clarabernadou';
-import './app.css'
+import './app.css';
 
 Modal.setAppElement('#yourAppElement');
 
@@ -77,7 +77,7 @@ function App() {
   };
 
   return (
-    <div className='test-modal'>
+    <div className="test-modal">
       <button onClick={openConfirmModal}>Test open modal</button>
       {showModal && <Modal closeConfirmModal={closeConfirmModal} />}
     </div>
@@ -95,3 +95,7 @@ Here is a screenshot of how the modal will look when rendered:
 ![Modal Render](./modal-render.png)
 
 Please note that the styling of the modal can be customized to fit your application's design.
+
+Feel free to modify and improve this README.md according to your specific needs.
+
+If you have any further questions, please let me know!
