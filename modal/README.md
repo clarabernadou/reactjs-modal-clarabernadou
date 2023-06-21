@@ -33,7 +33,6 @@ Here is an example of how to use the Modal component in your React application:
 ```jsx
 import React, { useState, useEffect } from 'react';
 import Modal from 'reactjs-modal-clarabernadou';
-import './app.css';
 
 Modal.setAppElement('#yourAppElement');
 
@@ -95,7 +94,3 @@ Here is a screenshot of how the modal will look when rendered:
 ![Modal Render](./modal-render.png)
 
 Please note that the styling of the modal can be customized to fit your application's design.
-
-Feel free to modify and improve this README.md according to your specific needs.
-
-If you have any further questions, please let me know!
