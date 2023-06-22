@@ -19,7 +19,7 @@ To install the Modal for ReactJS, follow these steps:
 2. Install additional dependencies:
 
    ```bash
-   $ npm install react react-dom react-scripts @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome
+   $ npm install
    ```
 
 ## API Documentation

@@ -1,99 +1,87 @@
 # Testing
 
 ## Modal Implementation
-Here is an example of the modal implementation schema in the file structure of your React application:
+Here is an example of the modal implementation structure in the file hierarchy of your React application:
 
-![Implementation Schema](./Schema.png)
+```
+├── docs/
+│   ├── accessibility/
+│   │   └── index.md
+│   ├── developpement/
+│   │   └── index.md
+│   └── test/
+│       └── index.md
+├── public/
+│   ├── index.html
+│   ├── manifest.json
+│   └── robots.txt
+├── src/
+│   ├── Components/
+│   │   ├── Modal.jsx
+│   │   └── modal.css
+│   ├── app.css
+│   ├── App.js
+│   └── index.js
+├── .gitignore
+├── modal-render.png
+├── package.json
+├── package-lock.json
+└── README.md
+```
 
-## Installation
-Start by installing the modal using the following command:
-```
-$ npm i reactjs-modal-clarabernadou
-```
+## DevDependencies
+The following DevDependencies are added to your project:
 
-Next, install the necessary dependencies by running the following command:
-```
-$ npm i --save react react-dom react-scripts @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome
-```
+### 1. Babel
+- **@babel/core**: The core of Babel that enables JavaScript code transformation.
+- **@babel/preset-env**: A Babel preset that transforms code based on the target environment.
+- **@babel/preset-react**: A Babel preset specifically for React to support React features.
 
-Finally, start your application using the following command:
-```
-$ npm start
-```
+### 2. ESLint
+- **eslint**: A JavaScript linter that helps detect and fix syntax errors and coding style issues.
+- **eslint-plugin-react**: An ESLint plugin for React that applies React-specific linting rules.
 
-You can now begin implementing the modal in your file!
+### 3. Prettier
+- **prettier**: A code formatting tool that helps maintain consistent code style.
+
+These DevDependencies enhance your development environment by enabling code transformation, linting, and code formatting.
+
+To install these DevDependencies, run the following command:
+
+```bash
+$ npm install
+```
 
 ## Usage
 Here's an example of how to use the modal in your code:
 
 ```jsx
-import React, { useState, useEffect } from 'react';
-import Modal from 'reactjs-modal-clarabernadou';
+import React, { useState } from 'react';
+import Modal from './components/Modal';
 
 const YourComponent = () => {
     const [showModal, setShowModal] = useState(false);
-    const [isModalOpen, setIsModalOpen] = useState(false);
 
-    useEffect(() => {
-        if (isModalOpen) {
-            // Disable scrolling on the main page when the modal is open
-            document.body.style.overflow = 'hidden';
-
-            // Disable form elements on the main page to prevent interaction during the modal
-            document.querySelectorAll('input, select, textarea').forEach((el) => {
-                el.setAttribute('disabled', 'disabled');
-            });
-
-            // Add an event listener for the "Escape" key when the modal is open
-            document.addEventListener('keydown', handleKeyDown);
-
-            // Remove the event listener when the modal is closed or when the component is unmounted
-            return () => {
-                document.removeEventListener('keydown', handleKeyDown);
-            };
-        } else {
-            // Restore scrolling on the main page when the modal is closed
-            document.body.style.overflow = 'auto';
-
-            // Re-enable form elements on the main page
-            document.querySelectorAll('input, select, textarea').forEach((el) => {
-                el.removeAttribute('disabled');
-            });
-        }
-    }, [isModalOpen]);
-
-    const openConfirmModal = () => {
-        // Show the modal by updating the showModal and isModalOpen state
+    const openModal = () => {
         setShowModal(true);
-        setIsModalOpen(true);
     };
 
-    const closeConfirmModal = () => {
-        // Close the modal by updating the showModal and isModalOpen state
+    const closeModal = () => {
         setShowModal(false);
-        setIsModalOpen(false);
-    };
-
-    const handleKeyDown = (event) => {
-        if (event.key === 'Escape') {
-            // Close the modal when the user presses the "Escape" key
-            closeConfirmModal();
-        }
     };
 
     return (
-        <div className='test-modal'>
-            {/* Button to open the modal */}
-            <button onClick={openConfirmModal}>Test open modal</button>
-
-            {/* Display the modal only if the showModal state is true */}
-            {showModal && <Modal closeConfirmModal={closeConfirmModal} />}
+        <div>
+            <button onClick={openModal}>Open Modal</button>
+            {showModal && <Modal closeModal={closeModal} />}
         </div>
     );
 };
+
+export default YourComponent;
 ```
 
-Make sure to adapt this code according to your specific implementation.
+Make sure to adjust the import path of the `Modal` component based on your project's file structure.
 
 ## Licenses
 Created by Clara Bernadou as part of the "JavaScript/React Application Developer" training program at OpenClassrooms.
