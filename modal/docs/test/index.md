@@ -3,30 +3,20 @@
 ## Modal Implementation
 Here is an example of the modal implementation structure in the file hierarchy of your React application:
 
-```
-├── docs/
-│   ├── accessibility/
-│   │   └── index.md
-│   ├── developpement/
-│   │   └── index.md
-│   └── test/
-│       └── index.md
-├── public/
-│   ├── index.html
-│   ├── manifest.json
-│   └── robots.txt
+``` 
 ├── src/
-│   ├── Components/
-│   │   ├── Modal.jsx
-│   │   └── modal.css
-│   ├── app.css
-│   ├── App.js
-│   └── index.js
-├── .gitignore
-├── modal-render.png
+│   ├── components/
+│   │   └── Modal/
+│   │       ├── Modal.jsx
+│   │       ├── modal.css
+│   │       └── index.js
+│   └── App.js
+├── public/
+│   └── index.html
 ├── package.json
 ├── package-lock.json
 └── README.md
+
 ```
 
 ## DevDependencies
