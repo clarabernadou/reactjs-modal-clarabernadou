@@ -1,22 +1,28 @@
 {
   "name": "reactjs-modal-clarabernadou",
-  "version": "0.1.4",
+  "version": "0.2.1",
   "private": false,
-  "type": "module",
+  "author": "Clara Bernadou",
+  "main": "dist/index.js",
+  "module": "dist/index.js", 
+  "files": [ "dist", "README.md" ] , 
+  "repository": { 
+    "type": "git", 
+    "url": "https://github.com/clarabernadou/reactjs-modal-clarabernadou" 
+  },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.4.0",
-    "@fortawesome/free-solid-svg-icons": "^6.4.0",
-    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@babel/polyfill": "^7.12.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1"
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -38,16 +44,9 @@
       "last 1 safari version"
     ]
   },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "index.js",
   "devDependencies": {
-    "@babel/core": "^7.15.0",
-    "@babel/preset-env": "^7.15.0",
-    "@babel/preset-react": "^7.14.5",
-    "eslint": "^8.0.1",
-    "eslint-plugin-react": "^7.26.0",
-    "prettier": "^2.4.1"
-  },
-  "author": "Clara Bernadou",
-  "license": "ISC"
+    "@babel/cli": "^7.22.5",
+    "@babel/core": "^7.22.5",
+    "@babel/preset-env": "^7.22.5"
+  }
 }
