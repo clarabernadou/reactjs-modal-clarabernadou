@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/clarabernadou/reactjs-modal-clarabernadou/static/css/main.2d00baae.css",
+    "main.js": "/clarabernadou/reactjs-modal-clarabernadou/static/js/main.7e63f6e8.js",
+    "index.html": "/clarabernadou/reactjs-modal-clarabernadou/index.html",
+    "main.2d00baae.css.map": "/clarabernadou/reactjs-modal-clarabernadou/static/css/main.2d00baae.css.map",
+    "main.7e63f6e8.js.map": "/clarabernadou/reactjs-modal-clarabernadou/static/js/main.7e63f6e8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2d00baae.css",
+    "static/js/main.7e63f6e8.js"
+  ]
+}

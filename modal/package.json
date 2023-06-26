@@ -1,7 +1,7 @@
 {
   "name": "reactjs-modal-clarabernadou",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.1.3",
+  "private": false,
   "type": "module",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
