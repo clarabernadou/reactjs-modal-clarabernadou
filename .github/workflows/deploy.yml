@@ -23,9 +23,11 @@ jobs:
           node-version: 18
           cache: npm
           cache-dependency-path: modal/package-lock.json
-      - run: npm ci
+      - name: Install the dependencies (the lock file of the repository is not in sync with package.json)
+        run: npm install --no-audit --no-fund
       - name: Use the demo page (source files in the repository stay untouched)
         run: |
+          cp ../demo/index.js src/index.js
           cp ../demo/App.js src/App.js
           cp ../demo/App.css src/App.css
       - name: Build the demo site
